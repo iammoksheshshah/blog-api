@@ -8,7 +8,7 @@ const landingRoutes = require('./routes/landing.routes');
 const blogRoutes = require('./routes/blog.routes');
 const { errorHandler } = require('./middlewares/error.middleware');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 1000;
 
 dotenv.config();
 const app = express();
