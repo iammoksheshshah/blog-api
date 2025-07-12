@@ -6,7 +6,7 @@ exports.list = async (req, res, next) => {
   try {
     const { page = 1, limit = 9, category = '', search = '' } = req.body;
     const query = {
-      blog_from: 'latestnews4u',
+      blog_from: 'blogsmk',
       ...(category && { category }),
       ...(search && { title: new RegExp(search, 'i') })
     };
@@ -149,7 +149,7 @@ exports.save = async (req, res, next) => {
       og_type: data.og_type,
       og_sitename: data.og_sitename,
       meta_description: data.meta_description,
-      blog_from: data.blog_from || 'latestnews4u',
+      blog_from: data.blog_from || 'blogsmk',
       other_image: data.other_image || []
     };
 
